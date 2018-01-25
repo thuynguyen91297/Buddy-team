@@ -1,0 +1,15 @@
+D:\Học hành\ProjectTeam\ProjectTeam\obj\Debug\ProjectTeam.FrmLogIn.resources
+D:\Học hành\ProjectTeam\ProjectTeam\obj\Debug\ProjectTeam.FrmToDoList.resources
+D:\Học hành\ProjectTeam\ProjectTeam\obj\Debug\ProjectTeam.MainForm.resources
+D:\Học hành\ProjectTeam\ProjectTeam\obj\Debug\ProjectTeam.TDLDialog.resources
+D:\Học hành\ProjectTeam\ProjectTeam\obj\Debug\ProjectTeam.csproj.GenerateResource.Cache
+D:\Học hành\ProjectTeam\ProjectTeam\bin\Debug\ProjectTeam.exe.config
+D:\Học hành\ProjectTeam\ProjectTeam\bin\Debug\ProjectTeam.exe
+D:\Học hành\ProjectTeam\ProjectTeam\bin\Debug\ProjectTeam.pdb
+D:\Học hành\ProjectTeam\ProjectTeam\obj\Debug\ProjectTeam.Properties.Resources.resources
+D:\Học hành\ProjectTeam\ProjectTeam\obj\Debug\ProjectTeam.csproj.CoreCompileInputs.cache
+D:\Học hành\ProjectTeam\ProjectTeam\obj\Debug\ProjectTeam.exe
+D:\Học hành\ProjectTeam\ProjectTeam\obj\Debug\ProjectTeam.pdb
+D:\Học hành\ProjectTeam\ProjectTeam\obj\Debug\ProjectTeam.FrmSignUp.resources
+D:\Học hành\ProjectTeam\ProjectTeam\obj\Debug\ProjectTeam.csprojResolveAssemblyReference.cache
+D:\Học hành\ProjectTeam\ProjectTeam\obj\Debug\ProjectTeam.FrmNewDashboard.resources

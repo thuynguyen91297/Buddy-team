@@ -8,7 +8,13 @@ namespace ProjectTeam
 {
     class TaskQuery
     {
-        public static String GET_USER_NAME = "SELECT * FROM AccountUser";
-
+        /*
+            RETURN USER NAME, PASSWORD FROM ACCOUNTUSER
+        */
+        public static String getUserNameFromDatabase(string username, string password)
+        {
+            string ACCOUNT = "SELECT * FROM AccountUser WHERE email = '" + username + "' and password = '" + password;
+            return ACCOUNT;
+        }
     }
 }

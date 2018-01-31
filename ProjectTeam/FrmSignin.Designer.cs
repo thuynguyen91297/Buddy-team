@@ -44,9 +44,9 @@
             this.lbUseName.AutoSize = true;
             this.lbUseName.Location = new System.Drawing.Point(29, 103);
             this.lbUseName.Name = "lbUseName";
-            this.lbUseName.Size = new System.Drawing.Size(69, 13);
+            this.lbUseName.Size = new System.Drawing.Size(67, 13);
             this.lbUseName.TabIndex = 1;
-            this.lbUseName.Text = "User Name : ";
+            this.lbUseName.Text = "User name : ";
             // 
             // lbPassword
             // 

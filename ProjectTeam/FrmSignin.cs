@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ProjectTeam
 {
@@ -15,6 +16,11 @@ namespace ProjectTeam
         DatabaseUtils dbUtils = new DatabaseUtils();
         DataSet ds = new DataSet();
 
+        SqlDataReader reader = null;
+
+        SqlCommand sqlCom;
+
+        MainForm mainDashboard;
         public FrmLogIn()
         {
             InitializeComponent();
@@ -22,12 +28,12 @@ namespace ProjectTeam
         
         private void btLogin_Click(object sender, EventArgs e)
         {
-            
+            string username = tbUserName.Text;
+            string password = tbPassword.Text;
+
             if (dbUtils.open())
             {
-                
-                ds = dbUtils.getDataSet(TaskQuery.GET_USER_NAME);
-                MessageBox.Show(ds.Tables["AccountUser"].ToString());
+                sqlCom = new SqlCommand(TaskQuery.getUserNameFromDatabase(username, password), dbUtils.getConnection());
             }
             else
             {
@@ -42,7 +48,21 @@ namespace ProjectTeam
             }
             else
             {
-                
+                reader = sqlCom.ExecuteReader();
+                while (reader.Read())
+                {
+                    if(tbUserName.Text == reader["username"].ToString() && tbPassword.Text == reader["password"].ToString())
+                    {
+                        MessageBox.Show("Login successfully");
+                        mainDashboard = new MainForm();
+                        mainDashboard.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username password!");
+                    }
+                }
             }
             
             

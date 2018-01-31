@@ -15,14 +15,17 @@ namespace ProjectTeam
         public FrmLogIn()
         {
             InitializeComponent();
-            //this.Close();
+            
         }
-
+        MainForm mainForm = new MainForm();
         private void btLogin_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
+            
+            //mainForm = new MainForm();
             mainForm.Show();
-            //this.Close();
+            mainForm.Activate();
+            
+            // this.Close();
         }
 
         private void lbCreatAcc_Click(object sender, EventArgs e)

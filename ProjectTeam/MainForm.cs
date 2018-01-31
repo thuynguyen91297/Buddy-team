@@ -23,17 +23,19 @@ namespace ProjectTeam
             InitializeComponent();
             LoadCSDL();
         }
-        void LoadCSDL() {
+        Boolean LoadCSDL() {
             try
             {
                 cnn = new SqlConnection(SQLString);
                 cnn.Open();
                 MessageBox.Show("Connected");
+                return true;
             
             }
             catch (Exception e)
             {
                 MessageBox.Show("False");
+                return false;
             }
         }
 
@@ -53,6 +55,11 @@ namespace ProjectTeam
             frmNewDashboard.Top = 50;
             frmNewDashboard.Left = 120;
             frmNewDashboard.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

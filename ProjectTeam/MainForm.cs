@@ -7,16 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ProjectTeam
 {
     public partial class MainForm : Form
     {
+        string SQLString = @"Data Source=DESKTOP-T73FOFC\SQLEXPRESS;Initial Catalog=BuddyTeam;Integrated Security=True";
+        SqlConnection cnn;
         FrmToDoList frmToDoList = new FrmToDoList();
         FrmNewDashboard frmNewDashboard = new FrmNewDashboard();
         public MainForm()
         {
+
             InitializeComponent();
+            LoadCSDL();
+        }
+        void LoadCSDL() {
+            try
+            {
+                cnn = new SqlConnection(SQLString);
+                cnn.Open();
+                MessageBox.Show("Connected");
+            
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("False");
+            }
         }
 
         private void btnDashboard1_Click(object sender, EventArgs e)

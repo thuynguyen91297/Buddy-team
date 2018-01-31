@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace ProjectTeam
 {
-    public partial class FrmSignUp : Form
+    public partial class FrmLogIn : Form
     {
-        public FrmSignUp()
+        public FrmLogIn()
         {
             InitializeComponent();
         }
 
-        private void lbLogin_Click(object sender, EventArgs e)
+        private void btLogin_Click(object sender, EventArgs e)
         {
-           
-
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
         }
 
-       
+        private void lbCreatAcc_Click(object sender, EventArgs e)
+        {
+            FrmSignUp fm = new FrmSignUp();
+            fm.Show();
+        }
     }
+
 }

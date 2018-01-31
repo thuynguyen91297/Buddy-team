@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tbNewDashboard = new System.Windows.Forms.TextBox();
+            this.btnCreateNewDashBoard = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -54,37 +54,37 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Title : ";
             // 
-            // textBox1
+            // tbNewDashboard
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 74);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(274, 34);
-            this.textBox1.TabIndex = 2;
+            this.tbNewDashboard.Location = new System.Drawing.Point(15, 74);
+            this.tbNewDashboard.Multiline = true;
+            this.tbNewDashboard.Name = "tbNewDashboard";
+            this.tbNewDashboard.Size = new System.Drawing.Size(274, 34);
+            this.tbNewDashboard.TabIndex = 2;
             // 
-            // button1
+            // btnCreateNewDashBoard
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(18, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(271, 33);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Create new ";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCreateNewDashBoard.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnCreateNewDashBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateNewDashBoard.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCreateNewDashBoard.Location = new System.Drawing.Point(18, 144);
+            this.btnCreateNewDashBoard.Name = "btnCreateNewDashBoard";
+            this.btnCreateNewDashBoard.Size = new System.Drawing.Size(271, 33);
+            this.btnCreateNewDashBoard.TabIndex = 4;
+            this.btnCreateNewDashBoard.Text = "Create new ";
+            this.btnCreateNewDashBoard.UseVisualStyleBackColor = false;
             // 
             // FrmNewDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(321, 197);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnCreateNewDashBoard);
+            this.Controls.Add(this.tbNewDashboard);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmNewDashboard";
-            this.Text = "FrmNewDashboard";
+            this.Text = "Create New Dashboard";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,7 +94,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbNewDashboard;
+        private System.Windows.Forms.Button btnCreateNewDashBoard;
     }
 }

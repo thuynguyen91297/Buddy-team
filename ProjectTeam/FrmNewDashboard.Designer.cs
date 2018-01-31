@@ -73,6 +73,7 @@
             this.btnCreateNewDashBoard.TabIndex = 4;
             this.btnCreateNewDashBoard.Text = "Create new ";
             this.btnCreateNewDashBoard.UseVisualStyleBackColor = false;
+            this.btnCreateNewDashBoard.Click += new System.EventHandler(this.btnCreateNewDashBoard_Click);
             // 
             // FrmNewDashboard
             // 

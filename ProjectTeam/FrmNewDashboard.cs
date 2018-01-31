@@ -16,5 +16,10 @@ namespace ProjectTeam
         {
             InitializeComponent();
         }
+
+        private void btnCreateNewDashBoard_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

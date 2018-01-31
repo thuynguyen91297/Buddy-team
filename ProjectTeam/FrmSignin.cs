@@ -21,8 +21,9 @@ namespace ProjectTeam
         {
             MainForm mainForm = new MainForm();
             mainForm.Show();
-        }
 
+        }
+        
         private void lbCreatAcc_Click(object sender, EventArgs e)
         {
             FrmSignUp fm = new FrmSignUp();

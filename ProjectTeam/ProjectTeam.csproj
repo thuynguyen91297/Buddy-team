@@ -78,6 +78,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaskQuery.cs" />
     <Compile Include="TDLDialog.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SimpleExam
+namespace ProjectTeam
 {
     class DatabaseUtils
     {
@@ -16,7 +16,7 @@ namespace SimpleExam
        
         public DatabaseUtils()
         {
-            dataConnection.ConnectionString = @"Data Source=MRHA\HAPPYSQL;Initial Catalog=Goods;Integrated Security=True";
+            dataConnection.ConnectionString = @"Data Source=MrHa\HappySQL;Initial Catalog=TasksManagement;Integrated Security=True";
         }
         
         public Boolean open()

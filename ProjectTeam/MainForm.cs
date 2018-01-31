@@ -13,27 +13,24 @@ namespace ProjectTeam
 {
     public partial class MainForm : Form
     {
-        string SQLString = @"Data Source=DESKTOP-T73FOFC\SQLEXPRESS;Initial Catalog=BuddyTeam;Integrated Security=True";
         SqlConnection cnn;
         FrmToDoList frmToDoList = new FrmToDoList();
         FrmNewDashboard frmNewDashboard = new FrmNewDashboard();
+
+        DatabaseUtils dbUtils = new DatabaseUtils();
         public MainForm()
         {
-
             InitializeComponent();
-            LoadCSDL();
+            loadDatabase();
         }
-        void LoadCSDL() {
-            try
+        public void loadDatabase() {
+            if (dbUtils.open())
             {
-                cnn = new SqlConnection(SQLString);
-                cnn.Open();
-                MessageBox.Show("Connected");
-            
+                MessageBox.Show("Success");
             }
-            catch (Exception e)
+            else
             {
-                MessageBox.Show("False");
+                MessageBox.Show("Success");
             }
         }
 

@@ -23,11 +23,6 @@ namespace ProjectTeam
             InitializeComponent();
         }
 
-        private void lbLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
             if(tbEmail.Text == "" || tbPassword.Text == "")

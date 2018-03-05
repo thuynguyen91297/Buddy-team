@@ -16,7 +16,7 @@ namespace ProjectTeam
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormInsert());
+            Application.Run(new MainForm());
         }
     }
 }

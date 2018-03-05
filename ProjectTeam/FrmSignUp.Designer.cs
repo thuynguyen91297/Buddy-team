@@ -112,7 +112,6 @@
             this.lbLogin.Size = new System.Drawing.Size(107, 13);
             this.lbLogin.TabIndex = 4;
             this.lbLogin.Text = "Log in your account?";
-            this.lbLogin.Click += new System.EventHandler(this.lbLogin_Click);
             // 
             // groupBox1
             // 

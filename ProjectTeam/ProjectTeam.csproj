@@ -52,11 +52,11 @@
     <Compile Include="FormDialogAddTask.Designer.cs">
       <DependentUpon>FormDialogAddTask.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormInsert.cs">
+    <Compile Include="FrmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormInsert.Designer.cs">
-      <DependentUpon>FormInsert.cs</DependentUpon>
+    <Compile Include="FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSignIn.cs">
       <SubType>Form</SubType>
@@ -76,12 +76,6 @@
     <Compile Include="FrmSignUp.Designer.cs">
       <DependentUpon>FrmSignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmToDoList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmToDoList.Designer.cs">
-      <DependentUpon>FrmToDoList.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,8 +94,8 @@
     <EmbeddedResource Include="FormDialogAddTask.resx">
       <DependentUpon>FormDialogAddTask.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormInsert.resx">
-      <DependentUpon>FormInsert.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDashboard.resx">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSignIn.resx">
       <DependentUpon>FrmSignIn.cs</DependentUpon>
@@ -111,9 +105,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSignUp.resx">
       <DependentUpon>FrmSignUp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmToDoList.resx">
-      <DependentUpon>FrmToDoList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

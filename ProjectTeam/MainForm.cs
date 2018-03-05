@@ -13,49 +13,36 @@ namespace ProjectTeam
 {
     public partial class MainForm : Form
     {
-        SqlConnection cnn;
-        FrmToDoList frmToDoList = new FrmToDoList();
-        FrmNewDashboard frmNewDashboard = new FrmNewDashboard();
 
-        DatabaseUtils dbUtils = new DatabaseUtils();
+        DatabaseUtils dbUtils;
+        FrmDashboard frmDashboard;
+
         public MainForm()
         {
             InitializeComponent();
+            dbUtils = new DatabaseUtils();
             loadDatabase();
         }
         public void loadDatabase() {
             if (dbUtils.open())
             {
-                MessageBox.Show("Success");
+                MessageBox.Show("Connect Success");
             }
             else
             {
-                MessageBox.Show("Success");
+                MessageBox.Show("Connect Fail");
             }
         }
 
-        private void btnDashboard1_Click(object sender, EventArgs e)
+        private void btnDashboardOne_Click(object sender, EventArgs e)
         {
-            frmToDoList.MdiParent = this;
-            frmToDoList.StartPosition = FormStartPosition.Manual;
-            frmToDoList.Top = 50;
-            frmToDoList.Left = 120;
-            frmToDoList.Show();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            frmNewDashboard.MdiParent = this;
-            frmNewDashboard.StartPosition = FormStartPosition.Manual;
-            frmNewDashboard.Top = 50;
-            frmNewDashboard.Left = 120;
-            frmNewDashboard.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            FormInsert formInsert = new FormInsert();
-            formInsert.ShowDialog();
+            frmDashboard = new FrmDashboard();
+            splitContainerMain.Panel2.Controls.Clear();
+            splitContainerMain.Panel2.Visible = true;
+            frmDashboard = new FrmDashboard();
+            frmDashboard.MdiParent = this;
+            splitContainerMain.Panel2.Controls.Add(frmDashboard);
+            frmDashboard.Show();
         }
     }
 }

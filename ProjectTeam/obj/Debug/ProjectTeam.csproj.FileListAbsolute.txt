@@ -20,7 +20,6 @@ D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam
 D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.FrmLogIn.resources
 D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.FrmNewDashboard.resources
 D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.FrmSignUp.resources
-D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.FrmToDoList.resources
 D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.MainForm.resources
 D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.Properties.Resources.resources
 D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.TDLDialog.resources
@@ -29,4 +28,4 @@ D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam
 D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.exe
 D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.pdb
 D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.FormDialogAddTask.resources
-D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.FormInsert.resources
+D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.FrmDashboard.resources

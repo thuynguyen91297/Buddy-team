@@ -28,63 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbUserName = new System.Windows.Forms.Label();
             this.lbEmail = new System.Windows.Forms.Label();
             this.lbPassword = new System.Windows.Forms.Label();
-            this.tbUserName = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.lbSignin = new System.Windows.Forms.Label();
             this.btnCreateAccount = new System.Windows.Forms.Button();
             this.lbLogin = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbConfirmPassword = new System.Windows.Forms.TextBox();
+            this.lbConfirmPassword = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lbUserName
-            // 
-            this.lbUserName.AutoSize = true;
-            this.lbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUserName.Location = new System.Drawing.Point(39, 105);
-            this.lbUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbUserName.Name = "lbUserName";
-            this.lbUserName.Size = new System.Drawing.Size(83, 16);
-            this.lbUserName.TabIndex = 0;
-            this.lbUserName.Text = "User Name :";
             // 
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmail.Location = new System.Drawing.Point(39, 175);
+            this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmail.Location = new System.Drawing.Point(24, 89);
             this.lbEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(48, 16);
+            this.lbEmail.Size = new System.Drawing.Size(45, 15);
             this.lbEmail.TabIndex = 0;
             this.lbEmail.Text = "Email :";
             // 
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPassword.Location = new System.Drawing.Point(39, 247);
+            this.lbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPassword.Location = new System.Drawing.Point(24, 118);
             this.lbPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(74, 16);
+            this.lbPassword.Size = new System.Drawing.Size(67, 15);
             this.lbPassword.TabIndex = 0;
             this.lbPassword.Text = "Password :";
             // 
-            // tbUserName
-            // 
-            this.tbUserName.Location = new System.Drawing.Point(152, 101);
-            this.tbUserName.Margin = new System.Windows.Forms.Padding(4);
-            this.tbUserName.Name = "tbUserName";
-            this.tbUserName.Size = new System.Drawing.Size(188, 22);
-            this.tbUserName.TabIndex = 1;
-            // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(152, 171);
+            this.tbEmail.Location = new System.Drawing.Point(152, 85);
             this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(188, 22);
@@ -92,7 +73,7 @@
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(152, 244);
+            this.tbPassword.Location = new System.Drawing.Point(152, 115);
             this.tbPassword.Margin = new System.Windows.Forms.Padding(4);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(188, 22);
@@ -119,6 +100,7 @@
             this.btnCreateAccount.TabIndex = 3;
             this.btnCreateAccount.Text = "CREATE";
             this.btnCreateAccount.UseVisualStyleBackColor = true;
+            this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // lbLogin
             // 
@@ -136,7 +118,7 @@
             // 
             this.groupBox1.Controls.Add(this.lbLogin);
             this.groupBox1.Controls.Add(this.btnCreateAccount);
-            this.groupBox1.Location = new System.Drawing.Point(16, 292);
+            this.groupBox1.Location = new System.Drawing.Point(16, 191);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -144,20 +126,39 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
+            // tbConfirmPassword
+            // 
+            this.tbConfirmPassword.Location = new System.Drawing.Point(152, 145);
+            this.tbConfirmPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.tbConfirmPassword.Name = "tbConfirmPassword";
+            this.tbConfirmPassword.Size = new System.Drawing.Size(188, 22);
+            this.tbConfirmPassword.TabIndex = 7;
+            // 
+            // lbConfirmPassword
+            // 
+            this.lbConfirmPassword.AutoSize = true;
+            this.lbConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbConfirmPassword.Location = new System.Drawing.Point(24, 148);
+            this.lbConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbConfirmPassword.Name = "lbConfirmPassword";
+            this.lbConfirmPassword.Size = new System.Drawing.Size(113, 15);
+            this.lbConfirmPassword.TabIndex = 6;
+            this.lbConfirmPassword.Text = "Confirm Password :";
+            // 
             // FrmSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(364, 395);
+            this.ClientSize = new System.Drawing.Size(364, 259);
+            this.Controls.Add(this.tbConfirmPassword);
+            this.Controls.Add(this.lbConfirmPassword);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbSignin);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbEmail);
-            this.Controls.Add(this.tbUserName);
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.lbEmail);
-            this.Controls.Add(this.lbUserName);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmSignUp";
@@ -170,16 +171,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbUserName;
         private System.Windows.Forms.Label lbEmail;
         private System.Windows.Forms.Label lbPassword;
-        private System.Windows.Forms.TextBox tbUserName;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label lbSignin;
         private System.Windows.Forms.Button btnCreateAccount;
         private System.Windows.Forms.Label lbLogin;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox tbConfirmPassword;
+        private System.Windows.Forms.Label lbConfirmPassword;
     }
 }

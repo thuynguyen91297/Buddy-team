@@ -78,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(321, 197);
+            this.ClientSize = new System.Drawing.Size(307, 197);
             this.Controls.Add(this.btnCreateNewDashBoard);
             this.Controls.Add(this.tbNewDashboard);
             this.Controls.Add(this.label2);

@@ -51,5 +51,11 @@ namespace ProjectTeam
             frmNewDashboard.Left = 120;
             frmNewDashboard.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormInsert formInsert = new FormInsert();
+            formInsert.ShowDialog();
+        }
     }
 }

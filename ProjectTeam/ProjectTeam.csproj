@@ -46,6 +46,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseUtils.cs" />
+    <Compile Include="FormDialogAddTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialogAddTask.Designer.cs">
+      <DependentUpon>FormDialogAddTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInsert.Designer.cs">
+      <DependentUpon>FormInsert.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +97,12 @@
     <Compile Include="TDLDialog.Designer.cs">
       <DependentUpon>TDLDialog.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormDialogAddTask.resx">
+      <DependentUpon>FormDialogAddTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInsert.resx">
+      <DependentUpon>FormInsert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSignIn.resx">
       <DependentUpon>FrmSignIn.cs</DependentUpon>
     </EmbeddedResource>

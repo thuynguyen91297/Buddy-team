@@ -64,8 +64,6 @@ namespace ProjectTeam
                     }
                 }
             }
-            
-            
         }
 
         private void lbCreatAcc_Click(object sender, EventArgs e)
@@ -73,6 +71,7 @@ namespace ProjectTeam
             FrmSignUp fm = new FrmSignUp();
             fm.Show();
         }
+
     }
 
 }

@@ -9,6 +9,12 @@ namespace ProjectTeam
     class TaskQuery
     {
         /*
+            RETURN LIST, TASK FROM CARD
+        */
+        public static String GET_TASK_FROM_CARD = "SELECT Title, Descriptions, beginDate, endDate FROM Cards";
+
+
+        /*
             RETURN USER NAME, PASSWORD FROM ACCOUNTUSER
         */
         public static String getUserNameFromDatabase(string username, string password)

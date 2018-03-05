@@ -75,7 +75,8 @@
             // 
             this.lbForgotPassword.AutoSize = true;
             this.lbForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbForgotPassword.Location = new System.Drawing.Point(29, 201);
+            this.lbForgotPassword.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbForgotPassword.Location = new System.Drawing.Point(29, 196);
             this.lbForgotPassword.Name = "lbForgotPassword";
             this.lbForgotPassword.Size = new System.Drawing.Size(92, 13);
             this.lbForgotPassword.TabIndex = 4;
@@ -84,10 +85,10 @@
             // lbLogin
             // 
             this.lbLogin.AutoSize = true;
-            this.lbLogin.Font = new System.Drawing.Font("Rockwell Condensed", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLogin.Location = new System.Drawing.Point(116, 47);
+            this.lbLogin.Font = new System.Drawing.Font("Lucida Console", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLogin.Location = new System.Drawing.Point(117, 46);
             this.lbLogin.Name = "lbLogin";
-            this.lbLogin.Size = new System.Drawing.Size(55, 26);
+            this.lbLogin.Size = new System.Drawing.Size(80, 24);
             this.lbLogin.TabIndex = 5;
             this.lbLogin.Text = "LOGIN";
             // 
@@ -95,7 +96,8 @@
             // 
             this.lbCreateNewAccount.AutoSize = true;
             this.lbCreateNewAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCreateNewAccount.Location = new System.Drawing.Point(86, 288);
+            this.lbCreateNewAccount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbCreateNewAccount.Location = new System.Drawing.Point(102, 233);
             this.lbCreateNewAccount.Name = "lbCreateNewAccount";
             this.lbCreateNewAccount.Size = new System.Drawing.Size(109, 13);
             this.lbCreateNewAccount.TabIndex = 6;
@@ -105,9 +107,9 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(173, 191);
+            this.btnLogin.Location = new System.Drawing.Point(184, 186);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(86, 28);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -117,8 +119,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(307, 310);
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ClientSize = new System.Drawing.Size(307, 268);
             this.Controls.Add(this.lbCreateNewAccount);
             this.Controls.Add(this.lbLogin);
             this.Controls.Add(this.lbForgotPassword);

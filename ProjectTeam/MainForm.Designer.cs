@@ -49,7 +49,7 @@
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(904, 35);
+            this.panel1.Size = new System.Drawing.Size(838, 35);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -71,6 +71,7 @@
             this.picBoxNewDashboard.Size = new System.Drawing.Size(64, 71);
             this.picBoxNewDashboard.TabIndex = 4;
             this.picBoxNewDashboard.TabStop = false;
+            this.picBoxNewDashboard.Click += new System.EventHandler(this.picBoxNewDashboard_Click);
             // 
             // splitContainerMain
             // 
@@ -82,15 +83,15 @@
             this.splitContainerMain.Panel1.Controls.Add(this.picBoxNewDashboard);
             this.splitContainerMain.Panel1.Controls.Add(this.btnDashboardTwo);
             this.splitContainerMain.Panel1.Controls.Add(this.btnDashboardOne);
-            this.splitContainerMain.Size = new System.Drawing.Size(907, 412);
-            this.splitContainerMain.SplitterDistance = 192;
+            this.splitContainerMain.Size = new System.Drawing.Size(841, 412);
+            this.splitContainerMain.SplitterDistance = 178;
             this.splitContainerMain.TabIndex = 1;
             // 
             // btnDashboardTwo
             // 
             this.btnDashboardTwo.Location = new System.Drawing.Point(6, 45);
             this.btnDashboardTwo.Name = "btnDashboardTwo";
-            this.btnDashboardTwo.Size = new System.Drawing.Size(181, 34);
+            this.btnDashboardTwo.Size = new System.Drawing.Size(169, 34);
             this.btnDashboardTwo.TabIndex = 1;
             this.btnDashboardTwo.Text = "Dashboard 2";
             this.btnDashboardTwo.UseVisualStyleBackColor = true;
@@ -99,7 +100,7 @@
             // 
             this.btnDashboardOne.Location = new System.Drawing.Point(6, 5);
             this.btnDashboardOne.Name = "btnDashboardOne";
-            this.btnDashboardOne.Size = new System.Drawing.Size(181, 34);
+            this.btnDashboardOne.Size = new System.Drawing.Size(169, 34);
             this.btnDashboardOne.TabIndex = 0;
             this.btnDashboardOne.Text = "Dashboard 1";
             this.btnDashboardOne.UseVisualStyleBackColor = true;
@@ -110,12 +111,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(907, 453);
+            this.ClientSize = new System.Drawing.Size(841, 453);
             this.Controls.Add(this.splitContainerMain);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNewDashboard)).EndInit();

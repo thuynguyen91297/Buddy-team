@@ -44,5 +44,17 @@ namespace ProjectTeam
             splitContainerMain.Panel2.Controls.Add(frmDashboard);
             frmDashboard.Show();
         }
+
+        private void picBoxNewDashboard_Click(object sender, EventArgs e)
+        {
+            showDialogAddingNewDashboard();
+        }
+
+        private void showDialogAddingNewDashboard()
+        {
+            FrmNewDashboard frmNewDashboard = new FrmNewDashboard();
+            frmNewDashboard.ShowDialog(this);
+            
+        }
     }
 }

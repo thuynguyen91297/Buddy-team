@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.txtIdTask = new System.Windows.Forms.TextBox();
-            this.txtNameList = new System.Windows.Forms.TextBox();
             this.txtTaskName = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.Add = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.txtNameList = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTasks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,13 +53,6 @@
             this.txtIdTask.Name = "txtIdTask";
             this.txtIdTask.Size = new System.Drawing.Size(100, 20);
             this.txtIdTask.TabIndex = 0;
-            // 
-            // txtNameList
-            // 
-            this.txtNameList.Location = new System.Drawing.Point(127, 47);
-            this.txtNameList.Name = "txtNameList";
-            this.txtNameList.Size = new System.Drawing.Size(140, 20);
-            this.txtNameList.TabIndex = 1;
             // 
             // txtTaskName
             // 
@@ -147,10 +140,11 @@
             // dgvTasks
             // 
             this.dgvTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTasks.Location = new System.Drawing.Point(12, 205);
+            this.dgvTasks.Location = new System.Drawing.Point(25, 205);
             this.dgvTasks.Name = "dgvTasks";
-            this.dgvTasks.Size = new System.Drawing.Size(626, 179);
+            this.dgvTasks.Size = new System.Drawing.Size(602, 179);
             this.dgvTasks.TabIndex = 12;
+            this.dgvTasks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTasks_CellContentClick);
             // 
             // Add
             // 
@@ -179,12 +173,20 @@
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // txtNameList
+            // 
+            this.txtNameList.Location = new System.Drawing.Point(127, 47);
+            this.txtNameList.Name = "txtNameList";
+            this.txtNameList.Size = new System.Drawing.Size(140, 20);
+            this.txtNameList.TabIndex = 16;
+            // 
             // FrmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 396);
             this.ControlBox = false;
+            this.Controls.Add(this.txtNameList);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Add);
@@ -199,7 +201,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtTaskName);
-            this.Controls.Add(this.txtNameList);
             this.Controls.Add(this.txtIdTask);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmDashboard";
@@ -214,7 +215,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtIdTask;
-        private System.Windows.Forms.TextBox txtNameList;
         private System.Windows.Forms.TextBox txtTaskName;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label1;
@@ -229,5 +229,6 @@
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtNameList;
     }
 }

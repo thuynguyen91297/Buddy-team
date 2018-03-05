@@ -40,14 +40,35 @@ namespace ProjectTeam
             {
                 dsTask = dbUtilsDashboard.getDataSet(TaskQuery.GET_TASKS_FROM_CARD);
                 dbUtilsDashboard.load_dgv(TaskQuery.GET_TASKS_FROM_CARD, dsTask, dgvTasks);
-                //dgvTasks.DataSource = dsTask;
-                //dgvTasks.DataMember = dsTask.Tables[0].ToString();
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(dbUtilsDashboard.g)
+                dbUtilsDashboard.errorMessage(208);
             }
             
         }
+
+        private void dgvTasks_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            DataGridViewRow row = dgvTasks.Rows[rowIndex];
+            try
+            {
+                // dbUtilsDashboard.load_comboBox();
+                txtNameList.Text = row.Cells[0].Value.ToString();
+                txtIdTask.Text = row.Cells[1].Value.ToString();
+                txtTaskName.Text = row.Cells[2].Value.ToString();
+                txtDescription.Text = row.Cells[3].Value.ToString();
+                txtBeginDate.Text = row.Cells[4].Value.ToString();
+                txtEndDate.Text = row.Cells[5].Value.ToString();
+            }
+            catch(Exception ex)
+            {
+                dbUtilsDashboard.errorMessage(208);
+            }
+            
+
+        }
+
     }
 }

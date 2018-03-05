@@ -16,7 +16,7 @@ namespace ProjectTeam
         /*
             RETURN LIST, TASK FROM CARD
         */
-        public static String GET_TASKS_FROM_CARD = "SELECT List.Title, IDCard, Cards.Title, Cards.Descriptions,[beginDate],[endDate] FROM [dbo].[Cards] INNER JOIN List ON List.IDList = Cards.IDList";
+        public static String GET_TASKS_FROM_CARD = "SELECT List.Title, IDCard, Cards.Title, Cards.Descriptions, [beginDate], [endDate] FROM [dbo].[Cards] INNER JOIN List ON List.IDList = Cards.IDList";
 
 
         /*

@@ -12,9 +12,15 @@ namespace ProjectTeam
 {
     public partial class FrmNewDashboard : Form
     {
+        //FrmNewDashboard frmNewDashboard;
         public FrmNewDashboard()
         {
             InitializeComponent();
+        }
+
+        private void btnCancelNewDashboard_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

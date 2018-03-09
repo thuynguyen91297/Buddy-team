@@ -1,17 +1,72 @@
-create database BuddyTeam
-create table AccountUser(ID varchar (5), email varchar (100), password varchar (100)
-					constraint pk_User primary key (ID)) 
-create table Board ( IDBoard  varchar (5), Title nvarchar (100), constraint pk_Board primary key ( IDBoard))
-create table BoardMember(IDTeam varchar (5), IDUser varchar (5), IDBoard varchar (5)
-					constraint pkBoardMem primary key (IDTeam),
-					constraint fkToUser foreign key (IDUser) references AccountUser(ID),
-					constraint fkToBoad foreign key (IDBoard ) references Board (IDBoard ))
-drop table BoardMember
-create table List(IDList varchar (5),Title nvarchar(100),IDBoard varchar (5), Descriptions nvarchar (500),
-				constraint pk_List primary key (IDList),
-				constraint fkListToBoard foreign key (IDBoard ) references Board (IDBoard ))
-create table Cards(IDCard varchar (5),Title nvarchar(100),IDList varchar (5), Descriptions nvarchar (500), beginDate date, endDate date,
-				constraint pk_Card primary key (IDCard ),
-				constraint fkCardToList foreign key (IDList ) references List (IDList))
-drop table Cards
-drop table List
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data;
+namespace ProjectTeam
+{
+    public partial class FrmSignUp : Form
+    {
+        public FrmSignUp()
+        {
+            InitializeComponent();
+        }
+
+        
+        public bool checkExistEmail()
+        {
+
+            string email = tbEmail.Text;
+            string SQLStringSelect = " SELECT [email]FROM[dbo].[AccountUser]";
+            Sqlcommands cmd = new Sqlcommands();
+            SqlConnection con = new SqlConnection();
+            cmd.getConnection();
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                MessageBox.Show("Tồn tại");
+                return true;
+            }
+            else
+            {
+                // chưa có
+                return false ;
+            }
+        }
+
+
+
+        private void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+            if (tbEmail.Text == "" || tbPassword.Text == "" || checkExistEmail()==true)
+            {
+                MessageBox.Show("Mời bạn nhập Email và Password đúng");
+            }
+            else
+            {
+                string SQLStringInsert = "INSERT INTO[dbo].[AccountUser]([email],[password]) VALUES('" + tbEmail.Text + "','" + tbPassword.Text + "')";
+                SqlConnection scn = new SqlConnection();
+                scn.ConnectionString = @"Data Source=DESKTOP-T73FOFC\SQLEXPRESS;Initial Catalog=BuddyTeam;Integrated Security=True";
+                SqlCommand scmd = new SqlCommand(SQLStringInsert, scn);
+
+                scmd.Parameters.Clear();
+                scn.Open();
+                try
+                {
+                    scmd.ExecuteNonQuery();
+                    MessageBox.Show("Đăng kí thành công");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+    }
+}

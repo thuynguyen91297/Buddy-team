@@ -33,7 +33,7 @@ namespace ProjectTeam
 
             if (dbUtils.open())
             {
-                sqlCom = new SqlCommand(TaskQuery.getUserNameFromDatabase(username, password), dbUtils.getConnection());
+                sqlCom = new SqlCommand(TaskQuery.GetUserNameFromDatabase(username, password), dbUtils.getConnection());
             }
             else
             {

@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ProjectTeam
 {
     public partial class FrmDashboard : Form
     {
         DatabaseUtils dbUtilsDashboard;
-        DataSet dsTask;
+        private DataSet dsTask;
 
         public FrmDashboard()
         {
@@ -45,9 +46,12 @@ namespace ProjectTeam
             {
                 dbUtilsDashboard.errorMessage(208);
             }
-            
+
         }
 
+        /*
+         *  event for cell in data gridview 
+         */
         private void dgvTasks_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
@@ -62,13 +66,49 @@ namespace ProjectTeam
                 txtBeginDate.Text = row.Cells[4].Value.ToString();
                 txtEndDate.Text = row.Cells[5].Value.ToString();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 dbUtilsDashboard.errorMessage(208);
             }
-            
-
         }
 
+        /*
+         * Click add task in Doard 
+         * Show from add new task 
+        */
+        private void btnAddTask_Click(object sender, EventArgs e)
+        {
+            FrmDialogAddTask frmDialogAdd = new FrmDialogAddTask();
+            frmDialogAdd.ShowDialog(this);
+        }
+
+        private void btnUpdateTask_Click(object sender, EventArgs e)
+        {
+            /*try
+            {
+                SqlCommand cmd = new SqlCommand(TaskQuery.UPDATE_TASK, dbUtilsDashboard.getConnection());
+                cmd.Parameters.AddWithValue("@IDCard", txtIdTask);
+                cmd.Parameters.AddWithValue("@Title", txtTaskName);
+                cmd.Parameters.AddWithValue("@IDList", txtNameList);
+                cmd.Parameters.AddWithValue("@Descriptions", txtDescription);
+                cmd.Parameters.AddWithValue("@beginDate", txtBeginDate);
+                cmd.Parameters.AddWithValue("@endDate", txtEndDate);
+                dbUtilsDashboard.executeNonQuery(TaskQuery.UPDATE_TASK);
+                MessageBox.Show("Nice! Updated!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Oh shit! You cann't update");
+            }
+            */
+        }
+
+        private void convertDate(string cdate, TextBox txtDate)
+        {
+            DateTime subDateTime = new DateTime();
+            subDateTime = DateTime.ParseExact(cdate, "MM-dd-yyyy", null);
+            string converted_date = subDateTime.ToString("dd-MM-yyyy");
+            txtDate.Text = converted_date;
+        }
     }
 }

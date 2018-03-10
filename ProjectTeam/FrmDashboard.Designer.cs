@@ -40,9 +40,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtEndDate = new System.Windows.Forms.TextBox();
             this.dgvTasks = new System.Windows.Forms.DataGridView();
-            this.Add = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAddTask = new System.Windows.Forms.Button();
+            this.btnUpdateTask = new System.Windows.Forms.Button();
+            this.btnDeleteTask = new System.Windows.Forms.Button();
             this.txtNameList = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTasks)).BeginInit();
             this.SuspendLayout();
@@ -146,32 +146,34 @@
             this.dgvTasks.TabIndex = 12;
             this.dgvTasks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTasks_CellContentClick);
             // 
-            // Add
+            // btnAddTask
             // 
-            this.Add.Location = new System.Drawing.Point(142, 163);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(113, 23);
-            this.Add.TabIndex = 13;
-            this.Add.Text = "Add ";
-            this.Add.UseVisualStyleBackColor = true;
+            this.btnAddTask.Location = new System.Drawing.Point(142, 163);
+            this.btnAddTask.Name = "btnAddTask";
+            this.btnAddTask.Size = new System.Drawing.Size(113, 23);
+            this.btnAddTask.TabIndex = 13;
+            this.btnAddTask.Text = "Add ";
+            this.btnAddTask.UseVisualStyleBackColor = true;
+            this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
             // 
-            // button2
+            // btnUpdateTask
             // 
-            this.button2.Location = new System.Drawing.Point(276, 163);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnUpdateTask.Location = new System.Drawing.Point(276, 163);
+            this.btnUpdateTask.Name = "btnUpdateTask";
+            this.btnUpdateTask.Size = new System.Drawing.Size(113, 23);
+            this.btnUpdateTask.TabIndex = 14;
+            this.btnUpdateTask.Text = "Update";
+            this.btnUpdateTask.UseVisualStyleBackColor = true;
+            this.btnUpdateTask.Click += new System.EventHandler(this.btnUpdateTask_Click);
             // 
-            // button3
+            // btnDeleteTask
             // 
-            this.button3.Location = new System.Drawing.Point(408, 163);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDeleteTask.Location = new System.Drawing.Point(408, 163);
+            this.btnDeleteTask.Name = "btnDeleteTask";
+            this.btnDeleteTask.Size = new System.Drawing.Size(113, 23);
+            this.btnDeleteTask.TabIndex = 15;
+            this.btnDeleteTask.Text = "Delete";
+            this.btnDeleteTask.UseVisualStyleBackColor = true;
             // 
             // txtNameList
             // 
@@ -187,9 +189,9 @@
             this.ClientSize = new System.Drawing.Size(658, 396);
             this.ControlBox = false;
             this.Controls.Add(this.txtNameList);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.Add);
+            this.Controls.Add(this.btnDeleteTask);
+            this.Controls.Add(this.btnUpdateTask);
+            this.Controls.Add(this.btnAddTask);
             this.Controls.Add(this.dgvTasks);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtEndDate);
@@ -226,9 +228,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtEndDate;
         private System.Windows.Forms.DataGridView dgvTasks;
-        private System.Windows.Forms.Button Add;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAddTask;
+        private System.Windows.Forms.Button btnUpdateTask;
+        private System.Windows.Forms.Button btnDeleteTask;
         private System.Windows.Forms.TextBox txtNameList;
     }
 }

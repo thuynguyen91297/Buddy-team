@@ -27,5 +27,5 @@ D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam
 D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.csproj.CoreCompileInputs.cache
 D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.exe
 D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.pdb
-D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.FormDialogAddTask.resources
 D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.FrmDashboard.resources
+D:\I LOVE STUDY\University\C#.NET\Group Project\TeamBuddy\Buddy-team\ProjectTeam\obj\Debug\ProjectTeam.FrmDialogAddTask.resources

@@ -54,7 +54,6 @@ namespace ProjectTeam
         {
             FrmNewDashboard frmNewDashboard = new FrmNewDashboard();
             frmNewDashboard.ShowDialog(this);
-            
         }
     }
 }

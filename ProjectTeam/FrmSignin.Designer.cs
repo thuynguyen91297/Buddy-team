@@ -61,7 +61,7 @@
             this.tbUserName.Location = new System.Drawing.Point(121, 100);
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(149, 20);
-            this.tbUserName.TabIndex = 3;
+            this.tbUserName.TabIndex = 0;
             // 
             // tbPassword
             // 
@@ -69,7 +69,7 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(149, 20);
-            this.tbPassword.TabIndex = 3;
+            this.tbPassword.TabIndex = 1;
             // 
             // lbLogin
             // 
@@ -89,7 +89,7 @@
             this.lbCreateNewAccount.Location = new System.Drawing.Point(102, 233);
             this.lbCreateNewAccount.Name = "lbCreateNewAccount";
             this.lbCreateNewAccount.Size = new System.Drawing.Size(109, 13);
-            this.lbCreateNewAccount.TabIndex = 6;
+            this.lbCreateNewAccount.TabIndex = 0;
             this.lbCreateNewAccount.Text = "Create new account?";
             this.lbCreateNewAccount.Click += new System.EventHandler(this.lbCreatAcc_Click);
             // 
@@ -99,7 +99,7 @@
             this.btnLogin.Location = new System.Drawing.Point(184, 186);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(86, 28);
-            this.btnLogin.TabIndex = 0;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);

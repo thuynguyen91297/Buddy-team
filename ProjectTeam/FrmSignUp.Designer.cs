@@ -132,8 +132,10 @@
             this.tbConfirmPassword.Location = new System.Drawing.Point(152, 145);
             this.tbConfirmPassword.Margin = new System.Windows.Forms.Padding(4);
             this.tbConfirmPassword.Name = "tbConfirmPassword";
+            this.tbConfirmPassword.PasswordChar = '*';
             this.tbConfirmPassword.Size = new System.Drawing.Size(188, 22);
-            this.tbConfirmPassword.TabIndex = 7;
+            this.tbConfirmPassword.TabIndex = 2;
+            this.tbConfirmPassword.Text = "*";
             // 
             // lbConfirmPassword
             // 

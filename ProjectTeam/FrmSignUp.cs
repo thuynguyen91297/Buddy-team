@@ -37,7 +37,7 @@ namespace ProjectTeam
             }
         }
 
-
+        
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
@@ -58,12 +58,19 @@ namespace ProjectTeam
                 {
                     scmd.ExecuteNonQuery();
                     MessageBox.Show("Đăng kí tài khoản thành công, mời bạn đăng nhập để sử dụng ứng dụng");
+                    this.Hide();
+                    
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void lbLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide() ;
         }
     }
 }

@@ -19,10 +19,11 @@ namespace ProjectTeam
         {
             InitializeComponent();
         }
-        //string ConnectionString = @"Data Source=DESKTOP-T73FOFC\SQLEXPRESS;Initial Catalog=BuddyTeam;Integrated Security=True";
-        static int attempt = 5;
-        private bool check(string email,string password)
+        
+        private bool check(string email, string password)
         {
+            
+
             string[] para = { "email", "password" };
             string[] values = { email, password };
             if(cmd.getDataTableStoredProcedure(para,values,"USP_Login" ).Rows.Count>0)
@@ -31,25 +32,37 @@ namespace ProjectTeam
             }
             return false;
         }
+
+        static int attempt = 5;
         private void btLogin_Click(object sender, EventArgs e)
         {
-            if(check (tbUserName.Text,tbPassword.Text))
+            if (tbUserName.Text == "" || tbPassword.Text == "")
             {
-                MainForm mainForm = new MainForm();
-                mainForm.Show();
-                this.Hide();
+                MessageBox.Show("Nhập đầy đủ email, password vào nhé");
             }
             else
             {
+                if (check (tbUserName.Text,tbPassword.Text))
+                {
+                    MainForm mainForm = new MainForm();
+                    mainForm.Show();
+                    this.Hide();
+                }
+                else
+                {
                 MessageBox.Show("Sai tên Tài khoản rồi nhaaaaaa");
+                }
             }
         }
+        FrmSignUp fm = new FrmSignUp();
 
         private void lbCreatAcc_Click(object sender, EventArgs e)
         {
-            FrmSignUp fm = new FrmSignUp();
+            //this.Hide();
             fm.Show();
         }
+
+        
     }
 
 }

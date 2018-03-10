@@ -46,9 +46,9 @@
             this.lbEmail.Location = new System.Drawing.Point(35, 118);
             this.lbEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(48, 16);
+            this.lbEmail.Size = new System.Drawing.Size(80, 16);
             this.lbEmail.TabIndex = 0;
-            this.lbEmail.Text = "Email :";
+            this.lbEmail.Text = "User Name:";
             // 
             // lbPassword
             // 
@@ -74,6 +74,7 @@
             this.tbPassword.Location = new System.Drawing.Point(148, 187);
             this.tbPassword.Margin = new System.Windows.Forms.Padding(4);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(188, 22);
             this.tbPassword.TabIndex = 1;
             // 
@@ -110,7 +111,7 @@
             this.lbLogin.Size = new System.Drawing.Size(107, 13);
             this.lbLogin.TabIndex = 4;
             this.lbLogin.Text = "Log in your account?";
-            
+            this.lbLogin.Click += new System.EventHandler(this.lbLogin_Click);
             // 
             // groupBox1
             // 

@@ -8,11 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-<<<<<<< HEAD
 
-=======
-using System.Data;
->>>>>>> origin/login
 namespace ProjectTeam
 {
     public partial class FrmSignUp : Form
@@ -27,14 +23,15 @@ namespace ProjectTeam
             InitializeComponent();
         }
         
-        string ConnectionString = @"Data Source=DESKTOP-T73FOFC\SQLEXPRESS;Initial Catalog=BuddyTeam;Integrated Security=True";
+        //string ConnectionString = @"Data Source=DESKTOP-T73FOFC\SQLEXPRESS;Initial Catalog=BuddyTeam;Integrated Security=True";
         
         private bool checkExistEmail()
         {
-            SqlConnection scn = new SqlConnection(ConnectionString);
+            SqlConnection scn = dbUtils.getConnection();
             string email = tbEmail.Text;
             string SQLStringSelect = " Select * from AccountUser where email = '" + email + "'";
-            SqlCommand cmd = new SqlCommand(SQLStringSelect,scn); scn.Open();
+            SqlCommand cmd = new SqlCommand(SQLStringSelect,scn);
+            dbUtils.open();
             SqlDataReader dr = cmd.ExecuteReader();
             if(dr.Read())
             {
@@ -46,8 +43,7 @@ namespace ProjectTeam
             }
         }
 
-<<<<<<< HEAD
-        private void btnCreateAccount_Click(object sender, EventArgs e)
+        /*private void btnCreateAccount_Click(object sender, EventArgs e)
         {
             if(tbEmail.Text == "" || tbPassword.Text == "")
             {
@@ -69,19 +65,16 @@ namespace ProjectTeam
                     clear();
                 }
             }
-        }
+        } */
 
         void clear()
         {
             tbEmail.Text = tbPassword.Text = tbConfirmPassword.Text = "";
         }
 
-=======
-        
-
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            SqlConnection scn = new SqlConnection(ConnectionString);
+            SqlConnection scn = dbUtils.getConnection();
             if (tbEmail.Text == "" || tbPassword.Text == "" || checkExistEmail()==true)
             {
                 MessageBox.Show("Email bạn đăng kí đã được đăng kí, mời bạn đk lại bằng Email khác");
@@ -90,10 +83,11 @@ namespace ProjectTeam
             {
                 string SQLStringInsert = "INSERT INTO[dbo].[AccountUser]([email],[password]) " +
                     "VALUES('" + tbEmail.Text + "','" + tbPassword.Text + "')";
-                 SqlCommand scmd = new SqlCommand(SQLStringInsert, scn);
+                SqlCommand scmd = new SqlCommand(SQLStringInsert, scn);
 
                 scmd.Parameters.Clear();
-                scn.Open();
+                //scn.Open();
+                dbUtils.open();
                 try
                 {
                     scmd.ExecuteNonQuery();
@@ -112,6 +106,6 @@ namespace ProjectTeam
         {
             this.Hide() ;
         }
->>>>>>> origin/login
+
     }
 }

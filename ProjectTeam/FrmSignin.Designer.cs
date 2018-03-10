@@ -71,20 +71,6 @@
             this.tbPassword.Size = new System.Drawing.Size(149, 20);
             this.tbPassword.TabIndex = 3;
             // 
-<<<<<<< HEAD
-            // lbForgotPassword
-            // 
-            this.lbForgotPassword.AutoSize = true;
-            this.lbForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbForgotPassword.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbForgotPassword.Location = new System.Drawing.Point(29, 196);
-            this.lbForgotPassword.Name = "lbForgotPassword";
-            this.lbForgotPassword.Size = new System.Drawing.Size(92, 13);
-            this.lbForgotPassword.TabIndex = 4;
-            this.lbForgotPassword.Text = "Forgot Password?";
-            // 
-=======
->>>>>>> origin/login
             // lbLogin
             // 
             this.lbLogin.AutoSize = true;
@@ -99,12 +85,8 @@
             // 
             this.lbCreateNewAccount.AutoSize = true;
             this.lbCreateNewAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.lbCreateNewAccount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbCreateNewAccount.Location = new System.Drawing.Point(102, 233);
-=======
-            this.lbCreateNewAccount.Location = new System.Drawing.Point(85, 267);
->>>>>>> origin/login
             this.lbCreateNewAccount.Name = "lbCreateNewAccount";
             this.lbCreateNewAccount.Size = new System.Drawing.Size(109, 13);
             this.lbCreateNewAccount.TabIndex = 6;
@@ -120,7 +102,7 @@
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btLogin_Click);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // FrmLogIn
             // 

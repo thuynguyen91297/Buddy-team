@@ -85,11 +85,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
     <Compile Include="TaskQuery.cs" />
-=======
     <Compile Include="Sqlcommands.cs" />
->>>>>>> origin/login
     <Compile Include="TDLDialog.cs">
       <SubType>Form</SubType>
     </Compile>

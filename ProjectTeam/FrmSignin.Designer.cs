@@ -33,7 +33,6 @@
             this.lbPassword = new System.Windows.Forms.Label();
             this.tbUserName = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
-            this.lbForgotPassword = new System.Windows.Forms.Label();
             this.lbLogin = new System.Windows.Forms.Label();
             this.lbCreateNewAccount = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -68,9 +67,11 @@
             // 
             this.tbPassword.Location = new System.Drawing.Point(121, 144);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(149, 20);
             this.tbPassword.TabIndex = 3;
             // 
+<<<<<<< HEAD
             // lbForgotPassword
             // 
             this.lbForgotPassword.AutoSize = true;
@@ -82,6 +83,8 @@
             this.lbForgotPassword.TabIndex = 4;
             this.lbForgotPassword.Text = "Forgot Password?";
             // 
+=======
+>>>>>>> origin/login
             // lbLogin
             // 
             this.lbLogin.AutoSize = true;
@@ -96,8 +99,12 @@
             // 
             this.lbCreateNewAccount.AutoSize = true;
             this.lbCreateNewAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.lbCreateNewAccount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbCreateNewAccount.Location = new System.Drawing.Point(102, 233);
+=======
+            this.lbCreateNewAccount.Location = new System.Drawing.Point(85, 267);
+>>>>>>> origin/login
             this.lbCreateNewAccount.Name = "lbCreateNewAccount";
             this.lbCreateNewAccount.Size = new System.Drawing.Size(109, 13);
             this.lbCreateNewAccount.TabIndex = 6;
@@ -123,7 +130,6 @@
             this.ClientSize = new System.Drawing.Size(307, 268);
             this.Controls.Add(this.lbCreateNewAccount);
             this.Controls.Add(this.lbLogin);
-            this.Controls.Add(this.lbForgotPassword);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbUserName);
             this.Controls.Add(this.lbPassword);
@@ -146,7 +152,6 @@
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.TextBox tbUserName;
         private System.Windows.Forms.TextBox tbPassword;
-        private System.Windows.Forms.Label lbForgotPassword;
         private System.Windows.Forms.Label lbLogin;
         private System.Windows.Forms.Label lbCreateNewAccount;
     }

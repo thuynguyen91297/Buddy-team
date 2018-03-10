@@ -44,19 +44,32 @@
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
+<<<<<<< HEAD
             this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEmail.Location = new System.Drawing.Point(24, 89);
             this.lbEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(45, 15);
+=======
+            this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmail.Location = new System.Drawing.Point(35, 118);
+            this.lbEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(80, 16);
+>>>>>>> origin/login
             this.lbEmail.TabIndex = 0;
-            this.lbEmail.Text = "Email :";
+            this.lbEmail.Text = "User Name:";
             // 
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
+<<<<<<< HEAD
             this.lbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPassword.Location = new System.Drawing.Point(24, 118);
+=======
+            this.lbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPassword.Location = new System.Drawing.Point(35, 190);
+>>>>>>> origin/login
             this.lbPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(67, 15);
@@ -65,7 +78,11 @@
             // 
             // tbEmail
             // 
+<<<<<<< HEAD
             this.tbEmail.Location = new System.Drawing.Point(152, 85);
+=======
+            this.tbEmail.Location = new System.Drawing.Point(148, 114);
+>>>>>>> origin/login
             this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(188, 22);
@@ -73,9 +90,14 @@
             // 
             // tbPassword
             // 
+<<<<<<< HEAD
             this.tbPassword.Location = new System.Drawing.Point(152, 115);
+=======
+            this.tbPassword.Location = new System.Drawing.Point(148, 187);
+>>>>>>> origin/login
             this.tbPassword.Margin = new System.Windows.Forms.Padding(4);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(188, 22);
             this.tbPassword.TabIndex = 1;
             // 
@@ -117,11 +139,15 @@
             // 
             this.groupBox1.Controls.Add(this.lbLogin);
             this.groupBox1.Controls.Add(this.btnCreateAccount);
+<<<<<<< HEAD
             this.groupBox1.Location = new System.Drawing.Point(16, 191);
+=======
+            this.groupBox1.Location = new System.Drawing.Point(13, 270);
+>>>>>>> origin/login
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(333, 49);
+            this.groupBox1.Size = new System.Drawing.Size(333, 53);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
@@ -149,9 +175,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(364, 259);
             this.Controls.Add(this.tbConfirmPassword);
             this.Controls.Add(this.lbConfirmPassword);
+=======
+            this.ClientSize = new System.Drawing.Size(364, 373);
+>>>>>>> origin/login
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbSignin);
             this.Controls.Add(this.tbPassword);

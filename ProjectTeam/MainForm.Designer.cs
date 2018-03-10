@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.picBoxNewDashboard = new System.Windows.Forms.PictureBox();
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
-            this.btnDashboardTwo = new System.Windows.Forms.Button();
             this.btnDashboardOne = new System.Windows.Forms.Button();
+            this.cbListDashboard = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNewDashboard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
@@ -80,31 +80,31 @@
             // 
             // splitContainerMain.Panel1
             // 
+            this.splitContainerMain.Panel1.Controls.Add(this.cbListDashboard);
             this.splitContainerMain.Panel1.Controls.Add(this.picBoxNewDashboard);
-            this.splitContainerMain.Panel1.Controls.Add(this.btnDashboardTwo);
             this.splitContainerMain.Panel1.Controls.Add(this.btnDashboardOne);
             this.splitContainerMain.Size = new System.Drawing.Size(841, 412);
             this.splitContainerMain.SplitterDistance = 178;
             this.splitContainerMain.TabIndex = 1;
             // 
-            // btnDashboardTwo
-            // 
-            this.btnDashboardTwo.Location = new System.Drawing.Point(6, 45);
-            this.btnDashboardTwo.Name = "btnDashboardTwo";
-            this.btnDashboardTwo.Size = new System.Drawing.Size(169, 34);
-            this.btnDashboardTwo.TabIndex = 1;
-            this.btnDashboardTwo.Text = "Dashboard 2";
-            this.btnDashboardTwo.UseVisualStyleBackColor = true;
-            // 
             // btnDashboardOne
             // 
-            this.btnDashboardOne.Location = new System.Drawing.Point(6, 5);
+            this.btnDashboardOne.Location = new System.Drawing.Point(6, 29);
             this.btnDashboardOne.Name = "btnDashboardOne";
             this.btnDashboardOne.Size = new System.Drawing.Size(169, 34);
             this.btnDashboardOne.TabIndex = 0;
             this.btnDashboardOne.Text = "Dashboard 1";
             this.btnDashboardOne.UseVisualStyleBackColor = true;
             this.btnDashboardOne.Click += new System.EventHandler(this.btnDashboardOne_Click);
+            // 
+            // cbListDashboard
+            // 
+            this.cbListDashboard.FormattingEnabled = true;
+            this.cbListDashboard.Location = new System.Drawing.Point(6, 5);
+            this.cbListDashboard.Name = "cbListDashboard";
+            this.cbListDashboard.Size = new System.Drawing.Size(169, 21);
+            this.cbListDashboard.TabIndex = 5;
+            this.cbListDashboard.SelectedIndexChanged += new System.EventHandler(this.cbListDashboard_SelectedIndexChanged);
             // 
             // MainForm
             // 
@@ -120,6 +120,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNewDashboard)).EndInit();
@@ -137,6 +138,6 @@
         private System.Windows.Forms.PictureBox picBoxNewDashboard;
         private System.Windows.Forms.SplitContainer splitContainerMain;
         private System.Windows.Forms.Button btnDashboardOne;
-        private System.Windows.Forms.Button btnDashboardTwo;
+        private System.Windows.Forms.ComboBox cbListDashboard;
     }
 }

@@ -35,7 +35,7 @@ namespace ProjectTeam
             }
         }
 
-        private void loadListTask()
+        public void loadListTask()
         {
             try
             {
@@ -46,7 +46,6 @@ namespace ProjectTeam
             {
                 dbUtilsDashboard.errorMessage(208);
             }
-
         }
 
         /*
@@ -59,7 +58,9 @@ namespace ProjectTeam
             try
             {
                 // dbUtilsDashboard.load_comboBox();
-                txtNameList.Text = row.Cells[0].Value.ToString();
+                //txtNameList.Text = row.Cells[0].Value.ToString();
+                //dbUtilsDashboard.load_comboBox(TaskQuery.GetList(int.Parse(row.Cells[1].Value.ToString())), cbNameList);
+                loadComboBoxNameList(int.Parse(row.Cells[1].Value.ToString()));
                 txtIdTask.Text = row.Cells[1].Value.ToString();
                 txtTaskName.Text = row.Cells[2].Value.ToString();
                 txtDescription.Text = row.Cells[3].Value.ToString();
@@ -69,6 +70,24 @@ namespace ProjectTeam
             catch (Exception ex)
             {
                 dbUtilsDashboard.errorMessage(208);
+            }
+        }
+
+        private void loadComboBoxNameList(int idCard)
+        {
+            try
+            {
+                string query = TaskQuery.GetList(idCard);
+                SqlDataAdapter da = new SqlDataAdapter(query, dbUtilsDashboard.getConnection());
+                DataSet ds = new DataSet();
+                da.Fill(ds, "List");
+                cbNameList.DisplayMember = "Title";
+                cbNameList.ValueMember = "IDList";
+                cbNameList.DataSource = ds.Tables["List"];
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error when load combobox name list");
             }
         }
 
@@ -84,23 +103,24 @@ namespace ProjectTeam
 
         private void btnUpdateTask_Click(object sender, EventArgs e)
         {
-            /*try
+            try
             {
                 SqlCommand cmd = new SqlCommand(TaskQuery.UPDATE_TASK, dbUtilsDashboard.getConnection());
                 cmd.Parameters.AddWithValue("@IDCard", txtIdTask);
-                cmd.Parameters.AddWithValue("@Title", txtTaskName);
-                cmd.Parameters.AddWithValue("@IDList", txtNameList);
-                cmd.Parameters.AddWithValue("@Descriptions", txtDescription);
+                cmd.Parameters.AddWithValue("@TaskName", txtTaskName);
+                //cmd.Parameters.AddWithValue("@IDList", txtNameList);
+                cmd.Parameters.AddWithValue("@decription", txtDescription);
                 cmd.Parameters.AddWithValue("@beginDate", txtBeginDate);
                 cmd.Parameters.AddWithValue("@endDate", txtEndDate);
-                dbUtilsDashboard.executeNonQuery(TaskQuery.UPDATE_TASK);
+                //dbUtilsDashboard.executeNonQuery(TaskQuery.UPDATE_TASK);
+                cmd.ExecuteNonQuery();
                 MessageBox.Show("Nice! Updated!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Oh shit! You cann't update");
+                MessageBox.Show("Something is wrong. You cann't update");
             }
-            */
+            
         }
 
         private void convertDate(string cdate, TextBox txtDate)
@@ -109,6 +129,21 @@ namespace ProjectTeam
             subDateTime = DateTime.ParseExact(cdate, "MM-dd-yyyy", null);
             string converted_date = subDateTime.ToString("dd-MM-yyyy");
             txtDate.Text = converted_date;
+        }
+
+        private void btnDeleteTask_Click(object sender, EventArgs e)
+        {
+            string strIdTask = txtIdTask.Text.ToString();
+            string strTaskName = txtTaskName.Text.ToString();
+            dbUtilsDashboard.executeNonQuery(TaskQuery.DeleteTask(strIdTask));
+            MessageBox.Show("" + strTaskName + "deleted!");
+            clear();
+            loadListTask();
+        }
+
+        private void clear()
+        {
+            txtIdTask.Text = txtTaskName.Text = txtEndDate.Text = txtDescription.Text = txtBeginDate.Text = "";
         }
     }
 }

@@ -14,6 +14,8 @@ namespace ProjectTeam
     public partial class FrmDialogAddTask : Form
     {
         DatabaseUtils dbUtils;
+        FrmDashboard frmDashboard = new FrmDashboard();
+
         public FrmDialogAddTask()
         {
             InitializeComponent();
@@ -59,7 +61,29 @@ namespace ProjectTeam
          */
         private void addNewTask()
         {
+            try
+            {
+                string taskName = txtNewTaskName.Text.ToString();
+                string begin = txtNewBeginDate.Text.ToString();
+                string end = txtNewEndDate.Text.ToString();
+                string description = txtNewDescription.Text.ToString();
+                int idList = cbNewListName.SelectedIndex + 1;
+                string titleList = txtNewTaskName.Text.ToString();
+                string queryInsertTask = TaskQuery.InsertNewTask(titleList, ""+ idList, description, begin, end);
+                dbUtils.executeNonQuery(queryInsertTask);
+                showMessage("New task created");
+                frmDashboard.loadListTask();
+                this.Close();
+            }
+            catch (Exception e)
+            {
+                showMessage(e.Message);
+            }
+        }
 
+        private void showMessage(string msg)
+        {
+            MessageBox.Show(msg);
         }
     }
 }

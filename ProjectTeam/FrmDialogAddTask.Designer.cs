@@ -37,10 +37,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtNewDescription = new System.Windows.Forms.TextBox();
             this.txtNewTaskName = new System.Windows.Forms.TextBox();
-            this.txtIdNewTask = new System.Windows.Forms.TextBox();
             this.btnCancelDialogNewTask = new System.Windows.Forms.Button();
             this.cbNewListName = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -53,7 +51,7 @@
             this.btnCreateNewTask.Location = new System.Drawing.Point(47, 201);
             this.btnCreateNewTask.Name = "btnCreateNewTask";
             this.btnCreateNewTask.Size = new System.Drawing.Size(268, 33);
-            this.btnCreateNewTask.TabIndex = 8;
+            this.btnCreateNewTask.TabIndex = 5;
             this.btnCreateNewTask.Text = "Create new";
             this.btnCreateNewTask.UseVisualStyleBackColor = false;
             this.btnCreateNewTask.Click += new System.EventHandler(this.btnCreateNewTask_Click);
@@ -71,7 +69,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(52, 154);
+            this.label6.Location = new System.Drawing.Point(59, 115);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 27;
@@ -79,15 +77,15 @@
             // 
             // txtNewEndDate
             // 
-            this.txtNewEndDate.Location = new System.Drawing.Point(129, 151);
+            this.txtNewEndDate.Location = new System.Drawing.Point(136, 112);
             this.txtNewEndDate.Name = "txtNewEndDate";
             this.txtNewEndDate.Size = new System.Drawing.Size(140, 20);
-            this.txtNewEndDate.TabIndex = 26;
+            this.txtNewEndDate.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(52, 119);
+            this.label5.Location = new System.Drawing.Point(59, 80);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 13);
             this.label5.TabIndex = 25;
@@ -95,10 +93,10 @@
             // 
             // txtNewBeginDate
             // 
-            this.txtNewBeginDate.Location = new System.Drawing.Point(129, 116);
+            this.txtNewBeginDate.Location = new System.Drawing.Point(136, 77);
             this.txtNewBeginDate.Name = "txtNewBeginDate";
             this.txtNewBeginDate.Size = new System.Drawing.Size(140, 20);
-            this.txtNewBeginDate.TabIndex = 24;
+            this.txtNewBeginDate.TabIndex = 1;
             // 
             // label4
             // 
@@ -121,20 +119,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 80);
+            this.label2.Location = new System.Drawing.Point(59, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 21;
-            this.label2.Text = "List Name :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(52, 45);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(24, 13);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "ID :";
+            this.label2.Text = "Name List :";
             // 
             // txtNewDescription
             // 
@@ -142,21 +131,14 @@
             this.txtNewDescription.Multiline = true;
             this.txtNewDescription.Name = "txtNewDescription";
             this.txtNewDescription.Size = new System.Drawing.Size(163, 94);
-            this.txtNewDescription.TabIndex = 19;
+            this.txtNewDescription.TabIndex = 4;
             // 
             // txtNewTaskName
             // 
             this.txtNewTaskName.Location = new System.Drawing.Point(433, 38);
             this.txtNewTaskName.Name = "txtNewTaskName";
             this.txtNewTaskName.Size = new System.Drawing.Size(163, 20);
-            this.txtNewTaskName.TabIndex = 18;
-            // 
-            // txtIdNewTask
-            // 
-            this.txtIdNewTask.Location = new System.Drawing.Point(129, 42);
-            this.txtIdNewTask.Name = "txtIdNewTask";
-            this.txtIdNewTask.Size = new System.Drawing.Size(100, 20);
-            this.txtIdNewTask.TabIndex = 17;
+            this.txtNewTaskName.TabIndex = 3;
             // 
             // btnCancelDialogNewTask
             // 
@@ -166,7 +148,7 @@
             this.btnCancelDialogNewTask.Location = new System.Drawing.Point(332, 201);
             this.btnCancelDialogNewTask.Name = "btnCancelDialogNewTask";
             this.btnCancelDialogNewTask.Size = new System.Drawing.Size(268, 33);
-            this.btnCancelDialogNewTask.TabIndex = 29;
+            this.btnCancelDialogNewTask.TabIndex = 6;
             this.btnCancelDialogNewTask.Text = "Cancel";
             this.btnCancelDialogNewTask.UseVisualStyleBackColor = false;
             this.btnCancelDialogNewTask.Click += new System.EventHandler(this.btnCancelDialogNewTask_Click);
@@ -174,10 +156,10 @@
             // cbNewListName
             // 
             this.cbNewListName.FormattingEnabled = true;
-            this.cbNewListName.Location = new System.Drawing.Point(129, 77);
+            this.cbNewListName.Location = new System.Drawing.Point(136, 38);
             this.cbNewListName.Name = "cbNewListName";
             this.cbNewListName.Size = new System.Drawing.Size(140, 21);
-            this.cbNewListName.TabIndex = 30;
+            this.cbNewListName.TabIndex = 0;
             // 
             // FrmDialogAddTask
             // 
@@ -193,10 +175,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNewDescription);
             this.Controls.Add(this.txtNewTaskName);
-            this.Controls.Add(this.txtIdNewTask);
             this.Controls.Add(this.btnCreateNewTask);
             this.Controls.Add(this.label1);
             this.Name = "FrmDialogAddTask";
@@ -218,10 +198,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNewDescription;
         private System.Windows.Forms.TextBox txtNewTaskName;
-        private System.Windows.Forms.TextBox txtIdNewTask;
         private System.Windows.Forms.Button btnCancelDialogNewTask;
         private System.Windows.Forms.ComboBox cbNewListName;
     }

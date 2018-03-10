@@ -43,7 +43,7 @@
             this.btnAddTask = new System.Windows.Forms.Button();
             this.btnUpdateTask = new System.Windows.Forms.Button();
             this.btnDeleteTask = new System.Windows.Forms.Button();
-            this.txtNameList = new System.Windows.Forms.TextBox();
+            this.cbNameList = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTasks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +59,7 @@
             this.txtTaskName.Location = new System.Drawing.Point(431, 8);
             this.txtTaskName.Name = "txtTaskName";
             this.txtTaskName.Size = new System.Drawing.Size(163, 20);
-            this.txtTaskName.TabIndex = 2;
+            this.txtTaskName.TabIndex = 5;
             // 
             // txtDescription
             // 
@@ -67,7 +67,7 @@
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(163, 94);
-            this.txtDescription.TabIndex = 3;
+            this.txtDescription.TabIndex = 6;
             // 
             // label1
             // 
@@ -119,7 +119,7 @@
             this.txtBeginDate.Location = new System.Drawing.Point(127, 86);
             this.txtBeginDate.Name = "txtBeginDate";
             this.txtBeginDate.Size = new System.Drawing.Size(140, 20);
-            this.txtBeginDate.TabIndex = 8;
+            this.txtBeginDate.TabIndex = 3;
             // 
             // label6
             // 
@@ -135,7 +135,7 @@
             this.txtEndDate.Location = new System.Drawing.Point(127, 121);
             this.txtEndDate.Name = "txtEndDate";
             this.txtEndDate.Size = new System.Drawing.Size(140, 20);
-            this.txtEndDate.TabIndex = 10;
+            this.txtEndDate.TabIndex = 4;
             // 
             // dgvTasks
             // 
@@ -151,7 +151,7 @@
             this.btnAddTask.Location = new System.Drawing.Point(142, 163);
             this.btnAddTask.Name = "btnAddTask";
             this.btnAddTask.Size = new System.Drawing.Size(113, 23);
-            this.btnAddTask.TabIndex = 13;
+            this.btnAddTask.TabIndex = 7;
             this.btnAddTask.Text = "Add ";
             this.btnAddTask.UseVisualStyleBackColor = true;
             this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
@@ -161,7 +161,7 @@
             this.btnUpdateTask.Location = new System.Drawing.Point(276, 163);
             this.btnUpdateTask.Name = "btnUpdateTask";
             this.btnUpdateTask.Size = new System.Drawing.Size(113, 23);
-            this.btnUpdateTask.TabIndex = 14;
+            this.btnUpdateTask.TabIndex = 8;
             this.btnUpdateTask.Text = "Update";
             this.btnUpdateTask.UseVisualStyleBackColor = true;
             this.btnUpdateTask.Click += new System.EventHandler(this.btnUpdateTask_Click);
@@ -171,16 +171,18 @@
             this.btnDeleteTask.Location = new System.Drawing.Point(408, 163);
             this.btnDeleteTask.Name = "btnDeleteTask";
             this.btnDeleteTask.Size = new System.Drawing.Size(113, 23);
-            this.btnDeleteTask.TabIndex = 15;
+            this.btnDeleteTask.TabIndex = 9;
             this.btnDeleteTask.Text = "Delete";
             this.btnDeleteTask.UseVisualStyleBackColor = true;
+            this.btnDeleteTask.Click += new System.EventHandler(this.btnDeleteTask_Click);
             // 
-            // txtNameList
+            // cbNameList
             // 
-            this.txtNameList.Location = new System.Drawing.Point(127, 47);
-            this.txtNameList.Name = "txtNameList";
-            this.txtNameList.Size = new System.Drawing.Size(140, 20);
-            this.txtNameList.TabIndex = 16;
+            this.cbNameList.FormattingEnabled = true;
+            this.cbNameList.Location = new System.Drawing.Point(127, 47);
+            this.cbNameList.Name = "cbNameList";
+            this.cbNameList.Size = new System.Drawing.Size(140, 21);
+            this.cbNameList.TabIndex = 1;
             // 
             // FrmDashboard
             // 
@@ -188,7 +190,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 396);
             this.ControlBox = false;
-            this.Controls.Add(this.txtNameList);
+            this.Controls.Add(this.cbNameList);
             this.Controls.Add(this.btnDeleteTask);
             this.Controls.Add(this.btnUpdateTask);
             this.Controls.Add(this.btnAddTask);
@@ -231,6 +233,6 @@
         private System.Windows.Forms.Button btnAddTask;
         private System.Windows.Forms.Button btnUpdateTask;
         private System.Windows.Forms.Button btnDeleteTask;
-        private System.Windows.Forms.TextBox txtNameList;
+        private System.Windows.Forms.ComboBox cbNameList;
     }
 }

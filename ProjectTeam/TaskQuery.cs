@@ -30,7 +30,19 @@ namespace ProjectTeam
 
         public static String GET_NAME_LIST = "SELECT [Title], [IDList] FROM [TasksManagement].[dbo].[List]";
 
-        public static String UPDATE_TASK = "UPDATE [dbo].[Cards] SET [IDCard] = @IDCard, [Title] = @Title, [IDList] = @IDList, [Descriptions] = @Descriptions,[beginDate] = @beginDate,[endDate] = @endDate WHERE [IDCard] = @IDCard";
+        public static String UPDATE_TASK = "UPDATE [dbo].[Cards] SET [Title] = @TaskName, [IDList] = @IdList, [Descriptions] = @decription, [beginDate] = @beginDate, [endDate] = @endDate WHERE IDCard = @IDCard";
+
+        public static String GetList(int idCard) => "SELECT [List].[IDList], [List].[Title] FROM [dbo].[List] INNER JOIN Cards ON [List].IDList = IDCard WHERE IDCard = "+ idCard;
+
+        /*
+         *
+         */
+         public static String DeleteTask(string idCard)
+        {
+            return "DELETE FROM [dbo].[Cards] WHERE IDCard = +"+ idCard;
+        }
+
+        public static String GET_LIST_DASHBOARD = "SELECT [Title], [IDBoard] FROM [dbo].[Board]";
 
         /*
          *  return string
@@ -38,5 +50,12 @@ namespace ProjectTeam
          *  param (<idboard>, <titleboard>)
          */
         public static String InsertNewDashboard(string titleBoard) => "INSERT INTO [dbo].[Board] ([Title]) VALUES ('" + titleBoard + "')";
+
+        /*
+         *  return string
+         *  create insert query 
+         *  param (<title>, <idlist>, <description>, <begin>, <end>)
+         */
+        public static String InsertNewTask(string title, string idList, string description, string begin, string end) => "INSERT INTO [dbo].[Cards] ([Title], [IDList], [Descriptions], [beginDate], [endDate]) VALUES ('"+title+"' ,'"+ int.Parse(idList)+"', '"+description+"','"+begin+"', '"+end+"')";
     }
 }

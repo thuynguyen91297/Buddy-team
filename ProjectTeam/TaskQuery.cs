@@ -16,8 +16,11 @@ namespace ProjectTeam
         /*
             RETURN LIST, TASK FROM CARD
         */
-        public static String GET_TASKS_FROM_CARD = "SELECT List.Title, IDCard, Cards.Title, Cards.Descriptions, [beginDate], [endDate] FROM [dbo].[Cards] INNER JOIN List ON List.IDList = Cards.IDList";
-
+        public static String GET_TASKS_FROM_CARD(int idDoard) => "SELECT List.Title, IDCard, Cards.Title, Cards.Descriptions, [beginDate], [endDate]" +
+        " FROM[dbo].[Cards]" +
+        " JOIN List ON List.IDList = Cards.IDList" +
+        " JOIN Board ON List.IDBoard = Board.IDBoard" +
+        " WHERE Board.IDBoard = '"+ idDoard +"'";
 
         /*
             RETURN USER NAME, PASSWORD FROM ACCOUNTUSER
@@ -57,5 +60,14 @@ namespace ProjectTeam
          *  param (<title>, <idlist>, <description>, <begin>, <end>)
          */
         public static String InsertNewTask(string title, string idList, string description, string begin, string end) => "INSERT INTO [dbo].[Cards] ([Title], [IDList], [Descriptions], [beginDate], [endDate]) VALUES ('"+title+"' ,'"+ int.Parse(idList)+"', '"+description+"','"+begin+"', '"+end+"')";
+
+        public static String GetAccountUser(string email) => "SELECT [IDUser],[email],[password] FROM [dbo].[AccountUser] WHERE email = '" + email + "'";
+
+
+        public static String InsertNewAccountUser(string email, string password) => "INSERT INTO[dbo].[AccountUser]([email],[password]) " +
+                    "VALUES('" + email + "','" + password + "')";
+
+        public static String GetAccountUserForLogin(string email, string pass) =>
+            "SELECT COUNT(*) FROM [dbo].[AccountUser] WHERE email = '" + email + "' AND password = '"+ pass +"'";
     }
 }

@@ -13,26 +13,18 @@ namespace ProjectTeam
 {
     public partial class FrmSignUp : Form
     {
-        DatabaseUtils dbUtils = new DatabaseUtils();
-        string sqlRegister = null;
-        
-        SqlCommand sqlComm;
+        private DatabaseUtils dbUtils;
 
         public FrmSignUp()
         {
             InitializeComponent();
+            dbUtils = new DatabaseUtils();
         }
-        
-        //string ConnectionString = @"Data Source=DESKTOP-T73FOFC\SQLEXPRESS;Initial Catalog=BuddyTeam;Integrated Security=True";
         
         private bool checkExistEmail()
         {
-            SqlConnection scn = dbUtils.getConnection();
             string email = tbEmail.Text;
-            string SQLStringSelect = " Select * from AccountUser where email = '" + email + "'";
-            SqlCommand cmd = new SqlCommand(SQLStringSelect,scn);
-            dbUtils.open();
-            SqlDataReader dr = cmd.ExecuteReader();
+            SqlDataReader dr = dbUtils.getDataReader(TaskQuery.GetAccountUser(email));
             if(dr.Read())
             {
                 return true;
@@ -74,26 +66,19 @@ namespace ProjectTeam
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            SqlConnection scn = dbUtils.getConnection();
+            //SqlConnection scn = dbUtils.getConnection();
             if (tbEmail.Text == "" || tbPassword.Text == "" || checkExistEmail()==true)
             {
                 MessageBox.Show("Email bạn đăng kí đã được đăng kí, mời bạn đk lại bằng Email khác");
             }
             else
             {
-                string SQLStringInsert = "INSERT INTO[dbo].[AccountUser]([email],[password]) " +
-                    "VALUES('" + tbEmail.Text + "','" + tbPassword.Text + "')";
-                SqlCommand scmd = new SqlCommand(SQLStringInsert, scn);
-
-                scmd.Parameters.Clear();
-                //scn.Open();
-                dbUtils.open();
                 try
                 {
-                    scmd.ExecuteNonQuery();
+                    dbUtils.executeNonQuery(TaskQuery.InsertNewAccountUser(tbEmail.Text, tbPassword.Text));
                     MessageBox.Show("Đăng kí tài khoản thành công, mời bạn đăng nhập để sử dụng ứng dụng");
-                    this.Hide();
-                    
+                    new FrmLogIn().Show();
+                    this.Close();
                 }
                 catch (Exception ex)
                 {
@@ -104,7 +89,7 @@ namespace ProjectTeam
 
         private void lbLogin_Click(object sender, EventArgs e)
         {
-            this.Hide() ;
+            this.Close();
         }
 
     }

@@ -39,8 +39,8 @@ namespace ProjectTeam
         {
             try
             {
-                dsTask = dbUtilsDashboard.getDataSet(TaskQuery.GET_TASKS_FROM_CARD);
-                dbUtilsDashboard.load_dgv(TaskQuery.GET_TASKS_FROM_CARD, dsTask, dgvTasks);
+                dsTask = dbUtilsDashboard.getDataSet(TaskQuery.GET_TASKS_FROM_CARD(MainForm.indexDashboard));
+                dbUtilsDashboard.load_dgv(TaskQuery.GET_TASKS_FROM_CARD(MainForm.indexDashboard), dsTask, dgvTasks);
             }
             catch (Exception ex)
             {
@@ -56,11 +56,9 @@ namespace ProjectTeam
             int rowIndex = e.RowIndex;
             DataGridViewRow row = dgvTasks.Rows[rowIndex];
             try
-            {
-                // dbUtilsDashboard.load_comboBox();
-                //txtNameList.Text = row.Cells[0].Value.ToString();
-                //dbUtilsDashboard.load_comboBox(TaskQuery.GetList(int.Parse(row.Cells[1].Value.ToString())), cbNameList);
-                loadComboBoxNameList(int.Parse(row.Cells[1].Value.ToString()));
+            {                 
+                dbUtilsDashboard.load_comboBox(TaskQuery.GetList(int.Parse(row.Cells[1].Value.ToString())), cbNameList);
+                //loadComboBoxNameList(int.Parse(row.Cells[1].Value.ToString()));
                 txtIdTask.Text = row.Cells[1].Value.ToString();
                 txtTaskName.Text = row.Cells[2].Value.ToString();
                 txtDescription.Text = row.Cells[3].Value.ToString();

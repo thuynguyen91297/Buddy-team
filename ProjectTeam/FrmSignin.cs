@@ -14,16 +14,17 @@ namespace ProjectTeam
 {
     public partial class FrmLogIn : Form
     {
-
-        Sqlcommands cmd = new Sqlcommands();
+        DatabaseUtils dbUtils;
+        Sqlcommands cmd;
         static int attempt = 5;
         FrmSignUp fm = new FrmSignUp();
+        MainForm mainForm;
 
         public FrmLogIn()
         {
             InitializeComponent();
+            dbUtils = new DatabaseUtils();
         }
-
 
        /* private void btLogin_Click(object sender, EventArgs e)
         {
@@ -65,20 +66,27 @@ namespace ProjectTeam
             }
         }
         */
-        private bool check(string email, string password)
+        private void verifyEmailAndPassword()
         {
-            string[] para = { "email", "password" };
-            string[] values = { email, password };
-            if (cmd.getDataTableStoredProcedure(para, values, "USP_Login").Rows.Count > 0)
+            SqlDataAdapter adapter = new SqlDataAdapter(TaskQuery.GetAccountUserForLogin(tbUserName.Text, tbPassword.Text), dbUtils.getConnection());
+            DataTable dbTable = new DataTable();
+            adapter.Fill(dbTable);
+            if(dbTable.Rows[0][0].ToString() == "1")
             {
-                return true;
+                MessageBox.Show("Login successful! Please use our app");
+                this.Hide();
+                mainForm = new MainForm();
+                mainForm.Show();
             }
-            return false;
+            else
+            {
+                MessageBox.Show("Please login again!");
+            }
         }
 
         private void lbCreatAcc_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            this.Close();
             fm.Show();
         }
 
@@ -90,16 +98,7 @@ namespace ProjectTeam
             }
             else
             {
-                if (check(tbUserName.Text, tbPassword.Text))
-                {
-                    MainForm mainForm = new MainForm();
-                    mainForm.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Sai tên Tài khoản rồi nhaaaaaa");
-                }
+                verifyEmailAndPassword();
             }
         }
     }

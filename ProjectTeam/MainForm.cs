@@ -17,11 +17,22 @@ namespace ProjectTeam
         DatabaseUtils dbUtils;
         FrmDashboard frmDashboard;
 
+        public static int indexDashboard;
+        public bool TheValue
+        {
+            get { return true; }
+        }
+
+
         public MainForm()
         {
             InitializeComponent();
             dbUtils = new DatabaseUtils();
             loadDatabase();
+            if (FrmNewDashboard.isNewDashboard)
+            {
+                loadListDashboard();
+            }
         }
 
         public void loadDatabase() {
@@ -64,8 +75,10 @@ namespace ProjectTeam
 
         private void cbListDashboard_SelectedIndexChanged(object sender, EventArgs e)
         {
-            btnDashboardOne.Text = cbListDashboard.SelectedValue.ToString();
-            btnDashboardOne.Visible = true;
+            indexDashboard = cbListDashboard.SelectedIndex;
+            displayPanelTwoWithDashboard();
+            //btnDashboardOne.Text = cbListDashboard.SelectedValue.ToString();
+            //btnDashboardOne.Visible = true;
         }
 
         private void displayPanelTwoWithDashboard()
@@ -79,7 +92,7 @@ namespace ProjectTeam
             frmDashboard.Show();
         }
 
-        private void loadListDashboard()
+        public void loadListDashboard()
         {
             try
             {

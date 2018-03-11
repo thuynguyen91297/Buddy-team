@@ -85,7 +85,7 @@
             // 
             this.lbCreateNewAccount.AutoSize = true;
             this.lbCreateNewAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCreateNewAccount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbCreateNewAccount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbCreateNewAccount.Location = new System.Drawing.Point(102, 233);
             this.lbCreateNewAccount.Name = "lbCreateNewAccount";
             this.lbCreateNewAccount.Size = new System.Drawing.Size(109, 13);
@@ -108,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(307, 268);
             this.Controls.Add(this.lbCreateNewAccount);
             this.Controls.Add(this.lbLogin);

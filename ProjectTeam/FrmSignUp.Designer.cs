@@ -69,7 +69,7 @@
             this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(188, 22);
-            this.tbEmail.TabIndex = 1;
+            this.tbEmail.TabIndex = 0;
             // 
             // tbPassword
             // 
@@ -135,7 +135,6 @@
             this.tbConfirmPassword.PasswordChar = '*';
             this.tbConfirmPassword.Size = new System.Drawing.Size(188, 22);
             this.tbConfirmPassword.TabIndex = 2;
-            this.tbConfirmPassword.Text = "*";
             // 
             // lbConfirmPassword
             // 

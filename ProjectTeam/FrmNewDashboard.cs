@@ -14,6 +14,14 @@ namespace ProjectTeam
     {
 
         DatabaseUtils dbUtils;
+        MainForm main;
+
+        public static bool isNewDashboard = false;
+
+        public bool TheValue
+        {
+            get { return true; }
+        }
 
         public FrmNewDashboard()
         {
@@ -31,8 +39,9 @@ namespace ProjectTeam
             string newBoard = "";
             newBoard = txtNewDashboard.Text;
             dbUtils.executeNonQuery(TaskQuery.InsertNewDashboard(newBoard));
-            showDialogNewDashboardSuccess("Dashboard " + newBoard + "created");
             this.Close();
+            showDialogNewDashboardSuccess("Dashboard " + newBoard + " created");
+            isNewDashboard = true;
         }
 
         private void showDialogNewDashboardSuccess(string msg)

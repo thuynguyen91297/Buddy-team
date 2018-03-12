@@ -69,11 +69,35 @@ namespace ProjectTeam
                 string description = txtNewDescription.Text.ToString();
                 int idList = cbNewListName.SelectedIndex + 1;
                 string titleList = txtNewTaskName.Text.ToString();
-                string queryInsertTask = TaskQuery.InsertNewTask(titleList, ""+ idList, description, begin, end);
-                dbUtils.executeNonQuery(queryInsertTask);
-                showMessage("New task created");
-                frmDashboard.loadListTask();
-                this.Close();
+
+                if (taskName == "")
+                {
+                    showMessage("Please enter task name");
+                    txtNewTaskName.Focus();
+                }
+                else if (begin == "")
+                {
+                    showMessage("Please enter begin date");
+                    txtNewBeginDate.Focus();
+                }
+                else if (end == "")
+                {
+                    showMessage("Please enter end date");
+                    txtNewEndDate.Focus();
+                }
+                else if (description == "")
+                {
+                    showMessage("Please enter description");
+                    txtNewDescription.Focus();
+                }
+                else
+                {
+                    string queryInsertTask = TaskQuery.InsertNewTask(titleList, "" + idList, description, begin, end);
+                    dbUtils.executeNonQuery(queryInsertTask);
+                    showMessage("New task created");
+                    frmDashboard.loadListTask();
+                    this.Close();
+                }
             }
             catch (Exception e)
             {

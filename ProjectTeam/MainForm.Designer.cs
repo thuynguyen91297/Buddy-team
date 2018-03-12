@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.picBoxNewDashboard = new System.Windows.Forms.PictureBox();
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
-            this.btnDashboardOne = new System.Windows.Forms.Button();
             this.cbListDashboard = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNewDashboard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
@@ -80,31 +80,32 @@
             // 
             // splitContainerMain.Panel1
             // 
+            this.splitContainerMain.Panel1.Controls.Add(this.label2);
             this.splitContainerMain.Panel1.Controls.Add(this.cbListDashboard);
             this.splitContainerMain.Panel1.Controls.Add(this.picBoxNewDashboard);
-            this.splitContainerMain.Panel1.Controls.Add(this.btnDashboardOne);
             this.splitContainerMain.Size = new System.Drawing.Size(841, 412);
             this.splitContainerMain.SplitterDistance = 178;
             this.splitContainerMain.TabIndex = 1;
             // 
-            // btnDashboardOne
-            // 
-            this.btnDashboardOne.Location = new System.Drawing.Point(6, 29);
-            this.btnDashboardOne.Name = "btnDashboardOne";
-            this.btnDashboardOne.Size = new System.Drawing.Size(169, 34);
-            this.btnDashboardOne.TabIndex = 0;
-            this.btnDashboardOne.Text = "Dashboard 1";
-            this.btnDashboardOne.UseVisualStyleBackColor = true;
-            this.btnDashboardOne.Click += new System.EventHandler(this.btnDashboardOne_Click);
-            // 
             // cbListDashboard
             // 
             this.cbListDashboard.FormattingEnabled = true;
-            this.cbListDashboard.Location = new System.Drawing.Point(6, 5);
+            this.cbListDashboard.Location = new System.Drawing.Point(6, 47);
             this.cbListDashboard.Name = "cbListDashboard";
             this.cbListDashboard.Size = new System.Drawing.Size(169, 21);
             this.cbListDashboard.TabIndex = 5;
             this.cbListDashboard.SelectedIndexChanged += new System.EventHandler(this.cbListDashboard_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label2.Location = new System.Drawing.Point(15, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(145, 22);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "The dashboard";
             // 
             // MainForm
             // 
@@ -118,13 +119,14 @@
             this.IsMdiContainer = true;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainForm";
+            this.Text = "Main page";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNewDashboard)).EndInit();
             this.splitContainerMain.Panel1.ResumeLayout(false);
+            this.splitContainerMain.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).EndInit();
             this.splitContainerMain.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -137,7 +139,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picBoxNewDashboard;
         private System.Windows.Forms.SplitContainer splitContainerMain;
-        private System.Windows.Forms.Button btnDashboardOne;
         private System.Windows.Forms.ComboBox cbListDashboard;
+        private System.Windows.Forms.Label label2;
     }
 }

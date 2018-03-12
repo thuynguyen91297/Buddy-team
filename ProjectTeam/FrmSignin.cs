@@ -94,7 +94,12 @@ namespace ProjectTeam
         {
             if (tbUserName.Text == "" || tbPassword.Text == "")
             {
-                MessageBox.Show("Nhập đầy đủ email, password vào nhé");
+                MessageBox.Show("Please enter your username!");
+                tbUserName.Focus();
+            }else if(tbPassword.Text == "")
+            {
+                MessageBox.Show("Please enter your password!");
+                tbPassword.Focus();
             }
             else
             {

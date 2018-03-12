@@ -57,8 +57,7 @@ namespace ProjectTeam
             DataGridViewRow row = dgvTasks.Rows[rowIndex];
             try
             {                 
-                dbUtilsDashboard.load_comboBox(TaskQuery.GetList(int.Parse(row.Cells[1].Value.ToString())), cbNameList);
-                //loadComboBoxNameList(int.Parse(row.Cells[1].Value.ToString()));
+                loadComboBoxNameList(int.Parse(row.Cells[1].Value.ToString()));
                 txtIdTask.Text = row.Cells[1].Value.ToString();
                 txtTaskName.Text = row.Cells[2].Value.ToString();
                 txtDescription.Text = row.Cells[3].Value.ToString();

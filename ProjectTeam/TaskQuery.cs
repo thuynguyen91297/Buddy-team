@@ -35,7 +35,7 @@ namespace ProjectTeam
 
         public static String UPDATE_TASK = "UPDATE [dbo].[Cards] SET [Title] = @TaskName, [IDList] = @IdList, [Descriptions] = @decription, [beginDate] = @beginDate, [endDate] = @endDate WHERE IDCard = @IDCard";
 
-        public static String GetList(int idCard) => "SELECT [List].[IDList], [List].[Title] FROM [dbo].[List] INNER JOIN Cards ON [List].IDList = IDCard WHERE IDCard = "+ idCard;
+        public static String GetList(int idCard) => "SELECT [List].[IDList], [List].[Title] FROM [dbo].[List] INNER JOIN Cards ON [List].IDList = Cards.IDList WHERE IDCard = "+ idCard;
 
         /*
          *

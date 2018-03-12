@@ -120,7 +120,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmLogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Log in";
+            this.Text = "5";
             this.TransparencyKey = System.Drawing.Color.DarkRed;
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -18,39 +18,21 @@ namespace ProjectTeam
         FrmDashboard frmDashboard;
 
         public static int indexDashboard;
-        public bool TheValue
-        {
-            get { return true; }
-        }
-
 
         public MainForm()
         {
             InitializeComponent();
             dbUtils = new DatabaseUtils();
-            loadDatabase();
             if (FrmNewDashboard.isNewDashboard)
             {
                 loadListDashboard();
             }
         }
 
-        public void loadDatabase() {
-            if (dbUtils.open())
-            {
-                MessageBox.Show("Connect Success");
-            }
-            else
-            {
-                MessageBox.Show("Connect Fail");
-            }
-        }
-
-        private void btnDashboardOne_Click(object sender, EventArgs e)
-        {
-            displayPanelTwoWithDashboard();
-        }
-
+        /*
+         * method click button add new dashboard
+         * param <"event">
+         */
         private void picBoxNewDashboard_Click(object sender, EventArgs e)
         {
             showDialogAddingNewDashboard();
@@ -64,23 +46,19 @@ namespace ProjectTeam
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            visibleButton();
             loadListDashboard();
-        }
-
-        private void visibleButton()
-        {
-            btnDashboardOne.Visible = false;
         }
 
         private void cbListDashboard_SelectedIndexChanged(object sender, EventArgs e)
         {
             indexDashboard = cbListDashboard.SelectedIndex;
             displayPanelTwoWithDashboard();
-            //btnDashboardOne.Text = cbListDashboard.SelectedValue.ToString();
-            //btnDashboardOne.Visible = true;
         }
 
+        /*
+         *  choose dashboard to show panel 2 in beside
+         *  
+         */
         private void displayPanelTwoWithDashboard()
         {
             frmDashboard = new FrmDashboard();
@@ -92,6 +70,10 @@ namespace ProjectTeam
             frmDashboard.Show();
         }
 
+        /*
+         *  method load list dashboard
+         *  no param
+         */
         public void loadListDashboard()
         {
             try

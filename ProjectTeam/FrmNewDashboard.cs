@@ -12,16 +12,10 @@ namespace ProjectTeam
 {
     public partial class FrmNewDashboard : Form
     {
-
         DatabaseUtils dbUtils;
         MainForm main;
 
         public static bool isNewDashboard = false;
-
-        public bool TheValue
-        {
-            get { return true; }
-        }
 
         public FrmNewDashboard()
         {
@@ -36,15 +30,21 @@ namespace ProjectTeam
 
         private void btnCreateNewDashBoard_Click(object sender, EventArgs e)
         {
-            string newBoard = "";
-            newBoard = txtNewDashboard.Text;
-            dbUtils.executeNonQuery(TaskQuery.InsertNewDashboard(newBoard));
-            this.Close();
-            showDialogNewDashboardSuccess("Dashboard " + newBoard + " created");
-            isNewDashboard = true;
+            if (txtNewDashboard.Text == "")
+            {
+                showDialogReport("Please enter new dashboard !");
+                txtNewDashboard.Focus();
+            }
+            else
+            {
+                dbUtils.executeNonQuery(TaskQuery.InsertNewDashboard(txtNewDashboard.Text.ToString()));
+                this.Close();
+                showDialogReport("Dashboard " + txtNewDashboard.Text + " created");
+                isNewDashboard = true;
+            }
         }
 
-        private void showDialogNewDashboardSuccess(string msg)
+        private void showDialogReport(string msg)
         {
             MessageBox.Show(msg);
         }
